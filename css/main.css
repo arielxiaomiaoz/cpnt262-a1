@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+
+*{
+  font-family:'Josefin Sans', sans-serif;  
+}
+body{
+  padding:0;
+  margin:0;
+  background:#30323d;
+}
+.Tailor-Event-Text{
+  text-align:center;
+}
+.Tailor-Event-Text:first-of-type{
+  font-size:22px;
+}
+.Tailor-Event-Text:first-of-type::before{
+  content:"POST ID: ";
+}
+
+.Calendar-Container{
+  padding:10px 10px 50px 10px;
+  border-radius:10px;
+  width:75vw;
+  height:auto;
+  margin:0 auto;
+  background-color:#168e76;
+  position:relative;
+  top:50vh;
+  transform:translateY(-50%);
+}
+
+.Calendar-Header{
+  width:98%;
+  height:40px;
+  margin:0 auto;
+  position:relative;
+  top:5px;
+  display:flex;
+  justify-content:space-around;
+  font-weight:700;
+  color:#f0f0f0;
+}
+.Calendar-Header .Day{
+  width:calc((100% / 7) - 4px);
+  text-align:center;
+  line-height:40px;
+}
+.Calendar-Container .Calendar{
+  width:98%;
+  height:auto;
+  min-height:445px;
+  background-color:white;
+  margin:0 auto;
+  position:Relative;
+  top:10px;
+}
+.Calendar-Container .Calendar .week{
+  display:flex;
+  justify-content:space-around;
+}
+
+.Calendar-Container .Calendar .week .Calendar-Item{
+   width:calc((100% / 7) - 4px);
+   height:80px;
+   margin:4px;
+   background:#f0f0f0;
+  
+  cursor:pointer;
+  
+  transition:background 0.2s;
+  -ms-transition:background 0.2s;
+  -moz-transition:background 0.2s;
+  -webkit-transition:background 0.2s;
+  -o-transition:background 0.2s;
+}
+.Calendar-Item p{
+  margin:0;
+  padding:0;
+  width:100%;
+  font-size:24px;
+  line-height:80px;
+  text-align:Center;
+}
+.Calendar-Container .Calendar .week .Calendar-Item:hover{
+  background:#e3e3e3;
+}
+.Empty-Tailor-Calendar-Item{
+  background:#f0f0f0 !important;
+  cursor:default !important;
+}
+.Calendar-Month-Title{
+  text-align:center;
+  margin:0;
+  padding:0;
+  color:white;
+  font-size:28px;
+  line-height:30px;
+}
+.Calendar-Media-Modal-Overlay{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.4);
+  display:none;
+}
+.Calendar-Media-Modal-Overlay .Calendar-Media-Modal{
+  position:absolute;
+  top:5%;
+  left:5%;
+  width:85%;
+  height:85%;
+  padding:2.5%;
+  background-color:#f0f0f0;
+  color:#30323d;
+  border-radius:10px;
+  overflow-y:scroll;
+
+}
+.Calendar-Media-Modal-Overlay .Calendar-Media-Modal p{
+  text-align:center;  
+}
+
+
+@media screen and (max-width:800px){
+  .Calendar-Container{
+    width:calc(100vw - 24px);
+  }
+}
+@media screen and (max-height:600px){
+  .Calendar-Container{
+    transform:none;
+    top:0px;
+    margin:10px auto;
+  }
+}
+.Hidden-Content-Tailor{
+  display:none;
+  opacity:0;
+  transition:opacity 0.2s;
+  -ms-transition:opacity 0.2s;
+  -moz-transition:opacity 0.2s;
+  -webkit-transition:opacity 0.2s;
+  -o-transition:opacity 0.2s;
+}
+#Hide-Until-Clicked{
+  display:none;
+  transition:opacity 0.2s, display 0.2s;
+  -ms-transition:opacity 0.2s, display 0.2s;
+  -moz-transition:opacity 0.2s, display 0.2s;
+  -webkit-transition:opacity 0.2s, display 0.2s;
+  -o-transition:opacity 0.2s, display 0.2s;
+}
+#Close-Tailor-Modal{
+  font-size:10px;
+  cursor:pointer;
+  text-decoration:underline;
+}
+#Close-Tailor-Modal:hover{
+  color:#168e76;
+}
